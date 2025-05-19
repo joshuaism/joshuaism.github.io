@@ -1,9 +1,30 @@
-<html>
-   <head>
-      <title>HTML Meta Tag</title>
-      <meta http-equiv = "refresh" content = "2; url = https://registry.jsonresume.org/joshuaism" />
-   </head>
-   <body>
-      <p>Redirecting...</p>
-   </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Joshua Riffel Resume Redirect</title>
+    <script>
+      // List of templates to use
+      const templates = [
+        "elegant",
+        "macchiato",
+        "kendall",
+        "professional",
+        "rickosborne",
+        "onepage-plus",
+        "even",
+        "mantra",
+      ];
+
+      // Redirect to my json resume with a random template applied
+      window.onload = function () {
+        const randomIndex = Math.floor(Math.random() * templates.length);
+        window.location.href =
+          "https://registry.jsonresume.org/joshuaism?theme=" +
+          templates[randomIndex];
+      };
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
